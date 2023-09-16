@@ -15,7 +15,6 @@ namespace AutomationExercise_Selenium.Pages
         {
             var allProductsPageBrowserTitle = _driver.Title;
             allProductsPageBrowserTitle.Should().Be("Automation Exercise - All Products");
-
         }
 
         public void VerifyAllProductsListIsDisplayed()

@@ -40,6 +40,10 @@ namespace AutomationExercise_Selenium.Pages
             WaitUntilElementIsDisplayed(By.XPath("//h2[text()='All Products']"));
         }
 
+        public void ClickLogoutButton()
+        {
+            _driver.FindElement(By.XPath("//a[text()=' Logout']")).Click();
+        }
         
     }
 }

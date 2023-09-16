@@ -30,6 +30,8 @@ namespace AutomationExercise_Selenium.Tests
             var isLoginSuccessful = loginPage.VerifyIfLoginIsSuccessful();
             isLoginSuccessful.Should().Be(true, "login should be successful for correct email and password");
 
+            homePage.ClickProductsLinkInHeader();
+
             var productsPage = new ProductsPage(driver);
             productsPage.VerifyAllProductsPageIsDisplayed();
             productsPage.VerifyAllProductsListIsDisplayed();
@@ -43,6 +45,8 @@ namespace AutomationExercise_Selenium.Tests
             productDetailsPage.VerifyProductAvailabilityIsDisplayed();
             productDetailsPage.VerifyProductConditionIsDisplayed();
             productDetailsPage.VerifyProductBrandIsDisplayed();
+
+            homePage.ClickLogoutButton();
 
         }
 

@@ -29,7 +29,9 @@ namespace AutomationExercise_Selenium.Pages
 
         public void ClickLoginButton()
         {
-            _driver.FindElement(By.XPath("//button[@data-qa='login-button']")).Click();
+            var loginButton = _driver.FindElement(By.XPath("//button[text()='Login']"));
+            loginButton.Click();
+            WaitUntilElementIsDisplayed(By.XPath("//a[text()=' Logout']"));
         }
 
         

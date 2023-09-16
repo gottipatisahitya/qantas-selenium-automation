@@ -39,6 +39,7 @@ namespace AutomationExercise_Selenium
 
             homePage.VerifyDeleteAccountLinkDisplayed().Should().Be(true, 
                 "Delete Account button should be dispalyed after successful login");
+            homePage.ClickLogoutButton();
         }
 
 
